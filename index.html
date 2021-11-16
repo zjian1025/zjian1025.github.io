@@ -165,6 +165,179 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/16/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.jpeg">
+      <meta itemprop="name" content="z见见">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="前端个人录">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2021/11/16/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">git常用命令</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-11-16 19:46:03 / 修改时间：20:06:53" itemprop="dateCreated datePublished" datetime="2021-11-16T19:46:03+08:00">2021-11-16</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E5%B8%B8%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">常用</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因为最近工作时，总是会需要到git命令操作，但是本人又不熟悉命令行，每次都要问下度娘，所以还是辛苦点 自己总结一下</p>
+<hr>
+<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><ul>
+<li><p>Windows:<br>官方网站下载<a target="_blank" rel="noopener" href="https://git-scm.com/download/win%E5%AE%89%E8%A3%85%EF%BC%8C%E4%B8%8B%E4%B8%80%E6%AD%A5%E4%B8%8B%E4%B8%80%E6%AD%A5%E5%B0%B1%E8%A1%8C">https://git-scm.com/download/win安装，下一步下一步就行</a></p>
+</li>
+<li><p>Macos:<br>最简单的方法是安装 Xcode Command Line Tools<br>也可以从官网下载安装 <a target="_blank" rel="noopener" href="https://git-scm.com/download/mac">https://git-scm.com/download/mac</a></p>
+</li>
+<li><p><em>安装完后输入</em>*  </p>
+<pre><code>   git --version
+</code></pre>
+<p>出现了如下的版本号就ok</p>
+<img src="/images/git-01.png"></li>
+</ul>
+<hr>
+<h2 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h2><p>Git 自带一个 git config 的工具来帮助设置控制 Git 外观和行为的配置变量。<br>你可以通过以下命令查看所有的配置以及它们所在的文件：</p>
+<pre><code>git config --list --show-origin
+</code></pre>
+<h6 id="配置用户信息"><a href="#配置用户信息" class="headerlink" title="配置用户信息"></a>配置用户信息</h6><pre><code>设置你的用户名和邮件地址
+git config --global user.name &quot;John Doe&quot;
+git config --global user.email johndoe@example.com
+检查你的配置
+git config –-list
+检查某一项配置
+git config user.name
+</code></pre>
+<hr>
+<h2 id="使用命令"><a href="#使用命令" class="headerlink" title="使用命令"></a>使用命令</h2><ol>
+<li><p>获取git仓<br> <strong>将尚未进行版本控制的本地目录转换为 Git 仓库</strong></p>
+<pre><code> git init
+ git add *.c
+ git add LICENSE
+ git commit -m &#39;initial project version&#39;
+</code></pre>
+<p> <strong>从其它服务器 克隆 一个已存在的 Git 仓库。</strong></p>
+<pre><code> git clone https://github.com/libgit2/libgit2
+</code></pre>
+<p> <strong>检查当前文件状态</strong></p>
+<pre><code> git status
+</code></pre>
+<p> <strong>追踪新文件或者将需要提交的文件放入缓存区，待下一次的提交</strong></p>
+<pre><code> git add xxx
+</code></pre>
+<p> <strong>查看未添加到暂存区的文件修改的内容</strong></p>
+<pre><code> git diff
+</code></pre>
+<p> <strong>查看暂存区文件的修改</strong></p>
+<pre><code> git diff –staged
+</code></pre>
+<p> <strong>提交更新</strong></p>
+<pre><code> git commit
+</code></pre>
+<p> <strong>所有已经跟踪过的文件暂存起来一并提交，跳过git add步骤</strong></p>
+<pre><code> git commit -a -m &#39;added new benchmarks&#39;
+</code></pre>
+<p> <strong>移除文件</strong></p>
+<pre><code> git rm
+</code></pre>
+<p> <strong>查看提交历史</strong></p>
+<pre><code> git log
+ git log -p -2
+</code></pre>
+<p> -p 显示每次提交文件的差异 -2 显示最近两次的提交<br> <strong>撤销操作，重新提交（提交完了才发现漏掉了几个文件没有添加，或者提交信息写错了）</strong></p>
+<pre><code> git commit --amend
+</code></pre>
+<p> <strong>取消暂存某文件</strong></p>
+<pre><code> git reset HEAD xxx
+</code></pre>
+<p> <strong>撤消对文件的修改</strong></p>
+<pre><code> git checkout – xxx
+</code></pre>
+<p> <strong>查看远程仓库</strong></p>
+<pre><code> git remote -v
+</code></pre>
+<p> <strong>添加远程仓库</strong></p>
+<pre><code> git remote add pb https://github.com/paulboone/ticgit
+</code></pre>
+<p> <strong>从远程仓库中抓取与拉取</strong></p>
+<pre><code> git fetch &lt;remote&gt;
+</code></pre>
+<p> <strong>推送到远程仓库</strong></p>
+<pre><code> git push origin master
+</code></pre>
+<p> <strong>查看某个远程仓库</strong></p>
+<pre><code> git remote show origin
+</code></pre>
+<p> <strong>远程仓库的重命名与移除</strong></p>
+<pre><code> git remote rename pb paul
+</code></pre>
+<p> <strong>Git 别名</strong></p>
+<pre><code> //输入 git checkout时，只需要输入 git co
+ git config --global alias.co checkout
+ 
+</code></pre>
+<p> <strong>创建分支</strong></p>
+<pre><code> git branch testing
+</code></pre>
+<p> <strong>切换分支</strong></p>
+<pre><code> git checkout testing
+</code></pre>
+</li>
+</ol>
+<hr>
+<p><strong>参考资料</strong><br><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%91%BD%E4%BB%A4%E8%A1%8C">https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%91%BD%E4%BB%A4%E8%A1%8C</a></p>
+<hr>
+
+      
+    </div>
+
+    
+    
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/12/hello-world/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -582,7 +755,7 @@ fetch(myRequest,myInit).then(function(response) &#123;
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">4</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -595,7 +768,7 @@ fetch(myRequest,myInit).then(function(response) &#123;
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
