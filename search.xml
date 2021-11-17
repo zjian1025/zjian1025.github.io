@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>git常用命令</title>
+      <link href="/2021/11/16/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+      <url>/2021/11/16/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</url>
+      
+        <content type="html"><![CDATA[<h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因为最近工作时，总是会需要到git命令操作，但是本人又不熟悉命令行，每次都要问下度娘，所以还是辛苦点 自己总结一下</p><hr><h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><ul><li><p>Windows:<br>官方网站下载<a href="https://git-scm.com/download/win%E5%AE%89%E8%A3%85%EF%BC%8C%E4%B8%8B%E4%B8%80%E6%AD%A5%E4%B8%8B%E4%B8%80%E6%AD%A5%E5%B0%B1%E8%A1%8C">https://git-scm.com/download/win安装，下一步下一步就行</a></p></li><li><p>Macos:<br>最简单的方法是安装 Xcode Command Line Tools<br>也可以从官网下载安装 <a href="https://git-scm.com/download/mac">https://git-scm.com/download/mac</a></p></li><li><p><em>安装完后输入</em>*  </p><pre><code>   git --version</code></pre><p>出现了如下的版本号就ok</p><img src="/images/git-01.png"></li></ul><hr><h2 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h2><p>Git 自带一个 git config 的工具来帮助设置控制 Git 外观和行为的配置变量。<br>你可以通过以下命令查看所有的配置以及它们所在的文件：</p><pre><code>git config --list --show-origin</code></pre><h6 id="配置用户信息"><a href="#配置用户信息" class="headerlink" title="配置用户信息"></a>配置用户信息</h6><pre><code>设置你的用户名和邮件地址git config --global user.name &quot;John Doe&quot;git config --global user.email johndoe@example.com检查你的配置git config –-list检查某一项配置git config user.name</code></pre><hr><h2 id="使用命令"><a href="#使用命令" class="headerlink" title="使用命令"></a>使用命令</h2><ol><li><p>获取git仓<br> <strong>将尚未进行版本控制的本地目录转换为 Git 仓库</strong></p><pre><code> git init git add *.c git add LICENSE git commit -m &#39;initial project version&#39;</code></pre><p> <strong>从其它服务器 克隆 一个已存在的 Git 仓库。</strong></p><pre><code> git clone https://github.com/libgit2/libgit2</code></pre><p> <strong>检查当前文件状态</strong></p><pre><code> git status</code></pre><p> <strong>追踪新文件或者将需要提交的文件放入缓存区，待下一次的提交</strong></p><pre><code> git add xxx</code></pre><p> <strong>查看未添加到暂存区的文件修改的内容</strong></p><pre><code> git diff</code></pre><p> <strong>查看暂存区文件的修改</strong></p><pre><code> git diff –staged</code></pre><p> <strong>提交更新</strong></p><pre><code> git commit</code></pre><p> <strong>所有已经跟踪过的文件暂存起来一并提交，跳过git add步骤</strong></p><pre><code> git commit -a -m &#39;added new benchmarks&#39;</code></pre><p> <strong>移除文件</strong></p><pre><code> git rm</code></pre><p> <strong>查看提交历史</strong></p><pre><code> git log git log -p -2</code></pre><p> -p 显示每次提交文件的差异 -2 显示最近两次的提交<br> <strong>撤销操作，重新提交（提交完了才发现漏掉了几个文件没有添加，或者提交信息写错了）</strong></p><pre><code> git commit --amend</code></pre><p> <strong>取消暂存某文件</strong></p><pre><code> git reset HEAD xxx</code></pre><p> <strong>撤消对文件的修改</strong></p><pre><code> git checkout – xxx</code></pre><p> <strong>查看远程仓库</strong></p><pre><code> git remote -v</code></pre><p> <strong>添加远程仓库</strong></p><pre><code> git remote add pb https://github.com/paulboone/ticgit</code></pre><p> <strong>从远程仓库中抓取与拉取</strong></p><pre><code> git fetch &lt;remote&gt;</code></pre><p> <strong>推送到远程仓库</strong></p><pre><code> git push origin master</code></pre><p> <strong>查看某个远程仓库</strong></p><pre><code> git remote show origin</code></pre><p> <strong>远程仓库的重命名与移除</strong></p><pre><code> git remote rename pb paul</code></pre><p> <strong>Git 别名</strong></p><pre><code> //输入 git checkout时，只需要输入 git co git config --global alias.co checkout </code></pre><p> <strong>创建分支</strong></p><pre><code> git branch testing</code></pre><p> <strong>切换分支</strong></p><pre><code> git checkout testing</code></pre></li></ol><hr><p><strong>参考资料</strong><br><a href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%91%BD%E4%BB%A4%E8%A1%8C">https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%91%BD%E4%BB%A4%E8%A1%8C</a></p><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 常用 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>Hello World</title>
+      <link href="/2021/11/12/hello-world/"/>
+      <url>/2021/11/12/hello-world/</url>
+      
+        <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>异步无刷新请求</title>
+      <link href="/2021/11/11/%E5%BC%82%E6%AD%A5%E6%97%A0%E5%88%B7%E6%96%B0%E8%AF%B7%E6%B1%82/"/>
+      <url>/2021/11/11/%E5%BC%82%E6%AD%A5%E6%97%A0%E5%88%B7%E6%96%B0%E8%AF%B7%E6%B1%82/</url>
+      
+        <content type="html"><![CDATA[<h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>通过浏览器提供的一个JS API, 向服务端发送一个请求，返回的数据被JS 接收，然后再用JS的操作，将数据渲染到DOM；</p><hr><h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><pre><code>现代的浏览器支持多个具有HTTP的 API:</code></pre><ul><li>XMLHttpRequest<br>  出现较早，浏览器支持最好，但是比较陈旧，一些新的js语言特性需要封装（如：Promise）</li><li>Fetch<br>  比较新，对一些新的特性有天然的良好的支持（如:Promise CORS）,但是兼容不好，而且缺少事件支持<br>  <em>这里解释下,跨源资源共享（CORS），是一种基于HTTP 头的机制，该机制通过允许服务器标示除了它自己以外的其它origin（域，协议和端口），这样浏览器可以访问加载这些资源。更通俗的来说，就是用来处理跨域请求的一系列的请求头（具体可查看MDN文档<a href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS%EF%BC%89">https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS）</a></em></li></ul><hr><h2 id="Fetch的使用"><a href="#Fetch的使用" class="headerlink" title="Fetch的使用"></a>Fetch的使用</h2><p>它返回一个 promise，这个 promise 会在请求响应后被 resolve，并传回 Response 对象。</p><ul><li>语法:    <strong>Promise<Response> fetch(input[, init])</strong>;</li><li>input: 请求的url或者是一个Request对象</li><li>init:可选参数<ol><li>   <strong>method</strong>: GET或者POST</li><li>   <strong>headers</strong>: 请求的头信息</li><li>   <strong>body</strong>: 请求的 body 信息</li><li>   <strong>mode</strong>: 请求的模式，如 cors、 no-cors 或者 same-origin</li><li>   <strong>mode</strong>: 请求的模式，如 cors、 no-cors 或者 same-origin</li><li>   <strong>cache</strong>:  请求的 cache 模式, default、 no-store、 reload no-cache 、 force-cache 或者 only-if-cached</li><li>   <strong>redirect</strong>: 可用的 redirect 模式: follow (自动重定向), error (如果产生重定向将自动终止并且抛出一个错误）, 或者 manual (手动处理重定向)</li></ol></li></ul><h6 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h6><pre><code>var myImage = document.querySelector(&#39;img&#39;);var myHeaders = new Headers();myHeaders.append(&#39;Content-Type&#39;, &#39;image/jpeg&#39;);var myInit = &#123;     method: &#39;GET&#39;,    headers: myHeaders,    mode: &#39;cors&#39;,    cache: &#39;default&#39; &#125;;var myRequest = new Request(&#39;flowers.jpg&#39;);fetch(myRequest,myInit).then(function(response) &#123;...&#125;);</code></pre><p><em>因为Fetch的缺点，所以本文就简略介绍，有兴趣的小伙伴们可以到MDN上查阅文档</em><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch">https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch</a></p><hr><h2 id="XMLHttpRequest使用"><a href="#XMLHttpRequest使用" class="headerlink" title="XMLHttpRequest使用"></a>XMLHttpRequest使用</h2><p>在不影响用户使用，能够刷新网页局部内容，XMLHttpRequest(XHR)对象在AJAX编程中被大量使用</p><ul><li><strong>XMLHttpRequest()构造函数，用来创建XHR实例对象</strong></li><li><strong>属性</strong><ul><li><strong>onreadystatechange</strong>: 当 readyState 属性发生变化时,调用的event handler</li><li><strong>readyState</strong>:请求的状态码</li><li><strong>response</strong>：整个响应实体</li><li><strong>responseText</strong>：对请求的响应</li><li><strong>responseType</strong>：定义响应类型</li><li><strong>responseURL</strong>: 返回经过序列化（serialized）的响应 URL</li><li><strong>responseXML</strong>：该请求的响应</li><li><strong>status</strong>：请求的响应状态 200 400….</li><li><strong>statusText</strong>：服务器返回的响应状态 “200 OK”</li><li><strong>timeout</strong>：数字，表示该请求的最大请求时间（毫秒），若超出该时间，请求会自动终止。</li><li><strong>ontimeout</strong>：当请求超时调用的 event handler</li><li><strong>upload</strong>: 代表上传进度。</li><li><strong>withCredentials</strong>: 一个布尔值，用来指定跨域 Access-Control 请求是否应当带有授权信息，如 cookie 或授权 header 头。</li></ul></li><li><strong>方法</strong><ul><li>**abort()**：如果请求已被发出，则立刻中止请求。</li><li>**getAllResponseHeaders()**：所有用 CRLF 分隔的响应头</li><li>**getResponseHeader()**：指定响应头的字符串</li><li>**open()**：初始化一个请求</li><li>**overrideMimeType()**：覆写由服务器返回的 MIME 类型</li><li>**send()**：发送请求。</li><li>**setRequestHeader()**：设置 HTTP 请求头的值。必须在 open() 之后、send() 之前调用 setRequestHeader() 方法。</li></ul></li><li><strong>事件</strong><ul><li><strong>onabort</strong>:请求被停止时</li><li><strong>onerror</strong>：请求报错时</li><li><strong>onload</strong>：请求完成时</li><li><strong>onloadend</strong>：请求结束时，不论成功或者失败</li><li><strong>onloadstart</strong>：请求接收到响应数据</li><li><strong>onprogress</strong>：当请求接收到更多的数据，周期性的触发(可用来处理上传)</li><li><strong>ontimeout</strong>：请求超时</li></ul></li><li><strong>使用示例</strong> <pre><code>  //创建XMR对象  const xhr = new XMLHttpRequest();  //配置请求参数  xhr.open(&quot;post&quot;,url,false);//false为同步 true为异步  //  xhr.responseType = &quot;JSON&quot;  //设置请求头  xhr.setRequestHeader(&#39;Content-Type&#39;,&#39;application/x-www-form-urlencoded&#39;);  //如果我们提交的是表单数据 formdata  let fd = new FormData();  fd.append(&#39;name&#39;,&#39;1111&#39;);  // 回调事件  xhr.onload = function () &#123;      console.log(xhr.response)      console.log(xhr.responseText)      console.log(xhr.responseType)      console.log(xhr.responseURL)      console.log(xhr.status)      console.log(xhr.statusText)      console.log(xhr.response)  &#125;  //发送请求  xhr.send(fd);  xhr.onloadstart = function()&#123;      console.log(&#39;服务端开始下载了&#39;)  &#125;  // 上传文件  xhr.upload.onloadstart = function()&#123;      console.log(&#39;开始上传了&#39;)  &#125;  xhr.upload.onprogress = function(e)&#123;      console.log(&#39;间隔触发 100ms左右触发一次&#39;)      console.log(e.loaded)      console.log(e.total)  &#125;  xhr.upload.onload = function()&#123;      console.log(&#39;上传完成&#39;)  &#125;</code></pre></li></ul><hr><p><strong>参考资料</strong><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API">https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API</a><br><a href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest">https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest</a></p><hr>]]></content>
+      
+      
+      <categories>
+          
+          <category> 常用 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 交互 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>本机localhost映射dns解析</title>
+      <link href="/2021/11/03/%E6%9C%AC%E6%9C%BAlocalhost%E6%98%A0%E5%B0%84dns%E8%A7%A3%E6%9E%90/"/>
+      <url>/2021/11/03/%E6%9C%AC%E6%9C%BAlocalhost%E6%98%A0%E5%B0%84dns%E8%A7%A3%E6%9E%90/</url>
+      
+        <content type="html"><![CDATA[<h2 id="本机localhost映射dns解析"><a href="#本机localhost映射dns解析" class="headerlink" title="本机localhost映射dns解析"></a>本机localhost映射dns解析</h2><h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><pre><code>C:\Windows\System32\drivers\etc目录下找到hosts文件 ， 进入修改</code></pre><ol><li>最后一行添加127.0.0.1 空格 写自己的域名映射  </li><li>增加后进入cmd命令行窗口输入ipconfig /flushdns刷新dns解析  </li><li>此后就可以通过自己写的域名访问自己本机上的域名了</li></ol><p>如下：<br>    <img src="/images/localhost.png" /></p><p>之后你的访问路径就可以是：<br>    <a href="http://mytest.com:8080/">http://mytest.com:8080</a> 相当于 localhost:8080</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 常用 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 技术 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
