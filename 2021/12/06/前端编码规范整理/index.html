@@ -22,28 +22,35 @@
     var CONFIG = {"hostname":"example.com","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="前端个人录">
-<meta property="og:url" content="http://example.com/index.html">
+  <meta name="description" content="概念本文整理了前端的常用的编码规范，包括 html css js 一些常用的规范性的写法，能让项目整体更加军队化，易于维护 HTML章节 html头部声明统一  单标签不要写闭合标签  自定义属性要以data-开头  使用section标签增强SEO  html要保持简洁，不要套太多层  样式要写在head标签里  要在head标签靠前位置写上charset的meta标签  特殊符号使用html实">
+<meta property="og:type" content="article">
+<meta property="og:title" content="前端编码规范整理">
+<meta property="og:url" content="http://example.com/2021/12/06/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E6%95%B4%E7%90%86/index.html">
 <meta property="og:site_name" content="前端个人录">
+<meta property="og:description" content="概念本文整理了前端的常用的编码规范，包括 html css js 一些常用的规范性的写法，能让项目整体更加军队化，易于维护 HTML章节 html头部声明统一  单标签不要写闭合标签  自定义属性要以data-开头  使用section标签增强SEO  html要保持简洁，不要套太多层  样式要写在head标签里  要在head标签靠前位置写上charset的meta标签  特殊符号使用html实">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://example.com/2021/12/06/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E6%95%B4%E7%90%86/…">
+<meta property="article:published_time" content="2021-12-06T01:00:00.000Z">
+<meta property="article:modified_time" content="2021-12-10T03:57:05.734Z">
 <meta property="article:author" content="z见见">
+<meta property="article:tag" content="前端">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2021/12/06/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E6%95%B4%E7%90%86/…">
 
-<link rel="canonical" href="http://example.com/">
+<link rel="canonical" href="http://example.com/2021/12/06/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E6%95%B4%E7%90%86/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>前端个人录</title>
+  <title>前端编码规范整理 | 前端个人录</title>
   
 
 
@@ -189,9 +196,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -207,10 +215,9 @@
       <meta itemprop="name" content="前端个人录">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/06/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E6%95%B4%E7%90%86/" class="post-title-link" itemprop="url">前端编码规范整理</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          前端编码规范整理
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -239,6 +246,13 @@
             </span>
 
           
+            <span class="post-meta-item" title="阅读次数" id="busuanzi_container_page_pv" style="display: none;">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-eye"></i>
+              </span>
+              <span class="post-meta-item-text">阅读次数：</span>
+              <span id="busuanzi_value_page_pv"></span>
+            </span>
 
         </div>
       </header>
@@ -249,7 +263,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>本文整理了前端的常用的编码规范，包括 html css js 一些常用的规范性的写法，能让项目整体更加军队化，易于维护</p>
+        <h1 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h1><p>本文整理了前端的常用的编码规范，包括 html css js 一些常用的规范性的写法，能让项目整体更加军队化，易于维护</p>
 <h2 id="HTML章节"><a href="#HTML章节" class="headerlink" title="HTML章节"></a>HTML章节</h2><ol>
 <li><p><strong>html头部声明统一</strong></p>
 </li>
@@ -543,7 +557,6 @@
 <p><strong>参考资料</strong><br>Airbnb JavaScript 代码规范（ES6）：<a target="_blank" rel="noopener" href="https://www.kancloud.cn/kancloud/javascript-style-guide/43146">https://www.kancloud.cn/kancloud/javascript-style-guide/43146</a></p>
 <hr>
 
-      
     </div>
 
     
@@ -551,763 +564,45 @@
     
     
     
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+        
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/12/01/sass_basic/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="z见见">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="前端个人录">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/01/sass_basic/" class="post-title-link" itemprop="url">Sass基础</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-01 17:00:00 / 修改时间：17:19:52" itemprop="dateCreated datePublished" datetime="2021-12-01T17:00:00+08:00">2021-12-01</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B8%B8%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">常用</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Sass基础"><a href="#Sass基础" class="headerlink" title="Sass基础"></a>Sass基础</h1><h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>  sass的一个重要特性就是它为css引入了变量。<br>  你可以把反复使用的css属性值 定义成变量，然后通过变量名来引用它们，而无需重复书写这一属性值。<br>  或者，对于仅使用过一 次的属性值，你可以赋予其一个易懂的变量名，让人一眼就知道这个属性值的用途。</p>
-<hr>
-<h2 id="1-使用变量"><a href="#1-使用变量" class="headerlink" title="1.使用变量"></a>1.使用变量</h2><pre><code>//声明变量
-  $bg-color : #606060;
-  //使用变量
-  div&#123;
-  $width: 100px;
-  width: $width;
-  height:100px;
-  background-color:$bg-color;
-  &#125;
-</code></pre>
-<ul>
-<li>$width只能用在代码块儿div内，$bg-color 可以在整个样式中用（ $bg-color 与$bg_color 是一样的 ）</li>
+<div>
+<ul class="post-copyright">
+  <li class="post-copyright-author">
+    <strong>本文作者： </strong>z见见
+  </li>
+  <li class="post-copyright-link">
+    <strong>本文链接：</strong>
+    <a href="http://example.com/2021/12/06/%E5%89%8D%E7%AB%AF%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E6%95%B4%E7%90%86/" title="前端编码规范整理">http://example.com/2021/12/06/前端编码规范整理/</a>
+  </li>
+  <li class="post-copyright-license">
+    <strong>版权声明： </strong>本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" rel="noopener" target="_blank"><i class="fab fa-fw fa-creative-commons"></i>BY-NC-SA</a> 许可协议。转载请注明出处！
+  </li>
 </ul>
-<hr>
-<h2 id="2-嵌套CSS-规则"><a href="#2-嵌套CSS-规则" class="headerlink" title="2.嵌套CSS 规则"></a>2.嵌套CSS 规则</h2><pre><code>//sass中可以这样写
-#content &#123;
-  article &#123;
-  h1 &#123; color: #333 &#125;
-  p &#123; margin-bottom: 1.4em &#125;
-  &#125;
-  aside &#123; background-color: #EEE &#125;
-&#125;
-//编译后为
-#content article h1 &#123; color: #333 &#125;
-#content article p &#123; margin-bottom: 1.4em &#125;
-#content aside &#123; background-color: #EEE &#125;
-</code></pre>
-<h3 id="2-1-父选择器的标识符-amp"><a href="#2-1-父选择器的标识符-amp" class="headerlink" title="2.1 父选择器的标识符&amp;"></a>2.1 父选择器的标识符&amp;</h3><pre><code>  //样例1
-  article a &#123;
-    color: blue;
-    &amp;:hover &#123; color: red &#125;
-  &#125;
-  //样例2
-  #content aside &#123;
-    color: red;
-    body.ie &amp; &#123; color: green &#125;
-  &#125;
-</code></pre>
-<h3 id="2-2-群组选择器的嵌套"><a href="#2-2-群组选择器的嵌套" class="headerlink" title="2.2 群组选择器的嵌套"></a>2.2 群组选择器的嵌套</h3><pre><code>  //样例1
-  article a &#123;
-    color: blue;
-    &amp;:hover &#123; color: red &#125;
-  &#125;
-  //样例2
-  #content aside &#123;
-    color: red;
-    body.ie &amp; &#123; color: green &#125;
-  &#125;
-</code></pre>
-<h3 id="2-3-子组合选择器和同层组合选择器：-gt-、-和"><a href="#2-3-子组合选择器和同层组合选择器：-gt-、-和" class="headerlink" title="2.3 子组合选择器和同层组合选择器：&gt;、+和~"></a>2.3 子组合选择器和同层组合选择器：&gt;、+和~</h3><pre><code>  //选择article下紧跟着的子元素中命中section选择器的元素
-  article &gt; section &#123; border: 1px solid #ccc &#125; 
-  //选择header元素后紧跟的p元素
-  header + p &#123; font-size: 1.1em &#125;
-  //选择所有跟在article后的同层article元素，不管它们之间隔了多少其他元素
-  article ~ article &#123; border-top: 1px dashed #ccc &#125;
-  
-  //总样例
-  article &#123;
-    ~ article &#123; border-top: 1px dashed #ccc &#125;
-    &gt; section &#123; background: #eee &#125;
-    dl &gt; &#123;
-      dt &#123; color: #333 &#125;
-      dd &#123; color: #555 &#125;
-    &#125;
-    nav + &amp; &#123; margin-top: 0 &#125;
-  &#125;
-</code></pre>
-<h3 id="2-4-嵌套属性"><a href="#2-4-嵌套属性" class="headerlink" title="2.4 嵌套属性"></a>2.4 嵌套属性</h3><pre><code>  // 样例1
-  nav &#123;
-    border: &#123;
-      style: solid;
-      width: 1px;
-      color: #ccc;
-    &#125;
-  &#125;
-  // 样例2
-  nav &#123;
-    border: 1px solid #ccc &#123;
-      left: 0px;
-      right: 0px;
-    &#125;
-  &#125;
-</code></pre>
-<hr>
-<h2 id="3-导入SASS文件"><a href="#3-导入SASS文件" class="headerlink" title="3.导入SASS文件"></a>3.导入SASS文件</h2><p>  css 的@import规则，只有执行到@import时，浏览器才会去下载其他css文件，这导致页面加载起来特别慢。<br>    sass的@import规则，在生成css文件时就把相关文件导入进来</p>
-<h3 id="3-1-使用SASS部分文件"><a href="#3-1-使用SASS部分文件" class="headerlink" title="3.1 使用SASS部分文件"></a>3.1 使用SASS部分文件</h3><pre><code>通过@import把sass样式分散到多个文件，一般约定，sass局部文件的文件名以下划线开头
-    例如：想导入themes/_night-sky.scss 只需 @import &quot;themes/night-sky&quot;
-</code></pre>
-<h3 id="3-2-默认变量值"><a href="#3-2-默认变量值" class="headerlink" title="3.2 默认变量值"></a>3.2 默认变量值</h3><pre><code>  //如果在导入局部文件之前声明了一个$fancybox-width变量，则局部文件中对$fancybox-width赋值400px的操作就无效。
-  //如果用户没有做这样的声明，则$fancybox-width将默认为400px。
-  $fancybox-width: 400px !default;
-  .fancybox &#123;
-    width: $fancybox-width;
-  &#125;
-</code></pre>
-<h3 id="3-3-嵌套导入"><a href="#3-3-嵌套导入" class="headerlink" title="3.3 嵌套导入"></a>3.3 嵌套导入</h3><pre><code>.blue-theme &#123;
-  //@import &quot;blue-theme&quot;
-&#125;  
-</code></pre>
-<h3 id="3-4-原生的CSS导入"><a href="#3-4-原生的CSS导入" class="headerlink" title="3.4 原生的CSS导入"></a>3.4 原生的CSS导入</h3><pre><code>不能用sass的@import直接导入一个原始的css文件,
-    可以把原始的css文件改名为.scss后缀，即可直接导入了
-</code></pre>
-<hr>
-<h2 id="4-静默注释"><a href="#4-静默注释" class="headerlink" title="4.静默注释"></a>4.静默注释</h2><pre><code>body &#123;
-  color: #333; // 这种注释内容不会出现在生成的css文件中
-  padding: 0; /* 这种注释内容会出现在生成的css文件中 */
-&#125;
-</code></pre>
-<hr>
-<h2 id="5-混合器"><a href="#5-混合器" class="headerlink" title="5.混合器"></a>5.混合器</h2><pre><code>可以通过sass的混合器实现大段样式的重用
-//定义一个混合器 @mixin 
-@mixin rounded-corners &#123;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-&#125;
-//使用混合器 @include
-notice &#123;
-  background-color: green;
-  border: 2px solid #00aa00;
-  @include rounded-corners;
-&#125;
-//给混合器传参
-@mixin link-colors($normal, $hover, $visited) &#123;
-  color: $normal;
-  &amp;:hover &#123; color: $hover; &#125;
-  &amp;:visited &#123; color: $visited; &#125;
-&#125;
-a &#123;
-  @include link-colors(blue, red, green);
-&#125;
-</code></pre>
-<hr>
-<h2 id="6-使用选择器继承来精简CSS-extend"><a href="#6-使用选择器继承来精简CSS-extend" class="headerlink" title="6.使用选择器继承来精简CSS @extend"></a>6.使用选择器继承来精简CSS <em>@extend</em></h2><pre><code>//通过选择器继承继承样式
-.error &#123;
-  border: 1px solid red;
-  background-color: #fdd;
-&#125;
-.seriousError &#123;
-  @extend .error;
-  border-width: 3px;
-&#125;
-//继承的高级用法
-//定义了一个名为disabled的类，样式修饰使它看上去像一个灰掉的超链接，
-//通过继承a这一超链接元素来实现
-.disabled &#123;
-  color: gray;
-  @extend a;
-&#125;
-</code></pre>
-<hr>
+</div>
 
-      
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag"># 前端</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/01/sass_basic/" rel="prev" title="Sass基础">
+      <i class="fa fa-chevron-left"></i> Sass基础
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/16/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="z见见">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="前端个人录">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/16/git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/" class="post-title-link" itemprop="url">git常用命令</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-11-16 19:46:03 / 修改时间：20:06:53" itemprop="dateCreated datePublished" datetime="2021-11-16T19:46:03+08:00">2021-11-16</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B8%B8%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">常用</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>因为最近工作时，总是会需要到git命令操作，但是本人又不熟悉命令行，每次都要问下度娘，所以还是辛苦点 自己总结一下</p>
-<hr>
-<h2 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h2><ul>
-<li><p>Windows:<br>官方网站下载<a target="_blank" rel="noopener" href="https://git-scm.com/download/win%E5%AE%89%E8%A3%85%EF%BC%8C%E4%B8%8B%E4%B8%80%E6%AD%A5%E4%B8%8B%E4%B8%80%E6%AD%A5%E5%B0%B1%E8%A1%8C">https://git-scm.com/download/win安装，下一步下一步就行</a></p>
-</li>
-<li><p>Macos:<br>最简单的方法是安装 Xcode Command Line Tools<br>也可以从官网下载安装 <a target="_blank" rel="noopener" href="https://git-scm.com/download/mac">https://git-scm.com/download/mac</a></p>
-</li>
-<li><p><em>安装完后输入</em>*  </p>
-<pre><code>   git --version
-</code></pre>
-<p>出现了如下的版本号就ok</p>
-<img src="/images/git-01.png"></li>
-</ul>
-<hr>
-<h2 id="Git配置"><a href="#Git配置" class="headerlink" title="Git配置"></a>Git配置</h2><p>Git 自带一个 git config 的工具来帮助设置控制 Git 外观和行为的配置变量。<br>你可以通过以下命令查看所有的配置以及它们所在的文件：</p>
-<pre><code>git config --list --show-origin
-</code></pre>
-<h6 id="配置用户信息"><a href="#配置用户信息" class="headerlink" title="配置用户信息"></a>配置用户信息</h6><pre><code>设置你的用户名和邮件地址
-git config --global user.name &quot;John Doe&quot;
-git config --global user.email johndoe@example.com
-检查你的配置
-git config –-list
-检查某一项配置
-git config user.name
-</code></pre>
-<hr>
-<h2 id="使用命令"><a href="#使用命令" class="headerlink" title="使用命令"></a>使用命令</h2><ol>
-<li><p>获取git仓<br> <strong>将尚未进行版本控制的本地目录转换为 Git 仓库</strong></p>
-<pre><code> git init
- git add *.c
- git add LICENSE
- git commit -m &#39;initial project version&#39;
-</code></pre>
-<p> <strong>从其它服务器 克隆 一个已存在的 Git 仓库。</strong></p>
-<pre><code> git clone https://github.com/libgit2/libgit2
-</code></pre>
-<p> <strong>检查当前文件状态</strong></p>
-<pre><code> git status
-</code></pre>
-<p> <strong>追踪新文件或者将需要提交的文件放入缓存区，待下一次的提交</strong></p>
-<pre><code> git add xxx
-</code></pre>
-<p> <strong>查看未添加到暂存区的文件修改的内容</strong></p>
-<pre><code> git diff
-</code></pre>
-<p> <strong>查看暂存区文件的修改</strong></p>
-<pre><code> git diff –staged
-</code></pre>
-<p> <strong>提交更新</strong></p>
-<pre><code> git commit
-</code></pre>
-<p> <strong>所有已经跟踪过的文件暂存起来一并提交，跳过git add步骤</strong></p>
-<pre><code> git commit -a -m &#39;added new benchmarks&#39;
-</code></pre>
-<p> <strong>移除文件</strong></p>
-<pre><code> git rm
-</code></pre>
-<p> <strong>查看提交历史</strong></p>
-<pre><code> git log
- git log -p -2
-</code></pre>
-<p> -p 显示每次提交文件的差异 -2 显示最近两次的提交<br> <strong>撤销操作，重新提交（提交完了才发现漏掉了几个文件没有添加，或者提交信息写错了）</strong></p>
-<pre><code> git commit --amend
-</code></pre>
-<p> <strong>取消暂存某文件</strong></p>
-<pre><code> git reset HEAD xxx
-</code></pre>
-<p> <strong>撤消对文件的修改</strong></p>
-<pre><code> git checkout – xxx
-</code></pre>
-<p> <strong>查看远程仓库</strong></p>
-<pre><code> git remote -v
-</code></pre>
-<p> <strong>添加远程仓库</strong></p>
-<pre><code> git remote add pb https://github.com/paulboone/ticgit
-</code></pre>
-<p> <strong>从远程仓库中抓取与拉取</strong></p>
-<pre><code> git fetch &lt;remote&gt;
-</code></pre>
-<p> <strong>推送到远程仓库</strong></p>
-<pre><code> git push origin master
-</code></pre>
-<p> <strong>查看某个远程仓库</strong></p>
-<pre><code> git remote show origin
-</code></pre>
-<p> <strong>远程仓库的重命名与移除</strong></p>
-<pre><code> git remote rename pb paul
-</code></pre>
-<p> <strong>Git 别名</strong></p>
-<pre><code> //输入 git checkout时，只需要输入 git co
- git config --global alias.co checkout
- 
-</code></pre>
-<p> <strong>创建分支</strong></p>
-<pre><code> git branch testing
-</code></pre>
-<p> <strong>切换分支</strong></p>
-<pre><code> git checkout testing
-</code></pre>
-</li>
-</ol>
-<hr>
-<p><strong>参考资料</strong><br><a target="_blank" rel="noopener" href="https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%91%BD%E4%BB%A4%E8%A1%8C">https://git-scm.com/book/zh/v2/%E8%B5%B7%E6%AD%A5-%E5%91%BD%E4%BB%A4%E8%A1%8C</a></p>
-<hr>
-
-      
-    </div>
-
-    
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/12/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="z见见">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="前端个人录">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/12/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-11-12 08:51:14" itemprop="dateCreated datePublished" datetime="2021-11-12T08:51:14+08:00">2021-11-12</time>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-
-      
-    </div>
-
-    
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/11/%E5%BC%82%E6%AD%A5%E6%97%A0%E5%88%B7%E6%96%B0%E8%AF%B7%E6%B1%82/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="z见见">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="前端个人录">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/11/%E5%BC%82%E6%AD%A5%E6%97%A0%E5%88%B7%E6%96%B0%E8%AF%B7%E6%B1%82/" class="post-title-link" itemprop="url">异步无刷新请求</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-11-11 08:42:03" itemprop="dateCreated datePublished" datetime="2021-11-11T08:42:03+08:00">2021-11-11</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-12 08:51:14" itemprop="dateModified" datetime="2021-11-12T08:51:14+08:00">2021-11-12</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B8%B8%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">常用</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h2><p>通过浏览器提供的一个JS API, 向服务端发送一个请求，返回的数据被JS 接收，然后再用JS的操作，将数据渲染到DOM；</p>
-<hr>
-<h2 id="分类"><a href="#分类" class="headerlink" title="分类"></a>分类</h2><pre><code>现代的浏览器支持多个具有HTTP的 API:
-</code></pre>
-<ul>
-<li>XMLHttpRequest<br>  出现较早，浏览器支持最好，但是比较陈旧，一些新的js语言特性需要封装（如：Promise）</li>
-<li>Fetch<br>  比较新，对一些新的特性有天然的良好的支持（如:Promise CORS）,但是兼容不好，而且缺少事件支持<br>  <em>这里解释下,跨源资源共享（CORS），是一种基于HTTP 头的机制，该机制通过允许服务器标示除了它自己以外的其它origin（域，协议和端口），这样浏览器可以访问加载这些资源。更通俗的来说，就是用来处理跨域请求的一系列的请求头（具体可查看MDN文档<a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS%EF%BC%89">https://developer.mozilla.org/zh-CN/docs/Web/HTTP/CORS）</a></em></li>
-</ul>
-<hr>
-<h2 id="Fetch的使用"><a href="#Fetch的使用" class="headerlink" title="Fetch的使用"></a>Fetch的使用</h2><p>它返回一个 promise，这个 promise 会在请求响应后被 resolve，并传回 Response 对象。</p>
-<ul>
-<li>语法:    <strong>Promise<Response> fetch(input[, init])</strong>;</li>
-<li>input: 请求的url或者是一个Request对象</li>
-<li>init:可选参数<ol>
-<li>   <strong>method</strong>: GET或者POST</li>
-<li>   <strong>headers</strong>: 请求的头信息</li>
-<li>   <strong>body</strong>: 请求的 body 信息</li>
-<li>   <strong>mode</strong>: 请求的模式，如 cors、 no-cors 或者 same-origin</li>
-<li>   <strong>mode</strong>: 请求的模式，如 cors、 no-cors 或者 same-origin</li>
-<li>   <strong>cache</strong>:  请求的 cache 模式, default、 no-store、 reload no-cache 、 force-cache 或者 only-if-cached</li>
-<li>   <strong>redirect</strong>: 可用的 redirect 模式: follow (自动重定向), error (如果产生重定向将自动终止并且抛出一个错误）, 或者 manual (手动处理重定向)</li>
-</ol>
-</li>
-</ul>
-<h6 id="使用示例"><a href="#使用示例" class="headerlink" title="使用示例"></a>使用示例</h6><pre><code>var myImage = document.querySelector(&#39;img&#39;);
-var myHeaders = new Headers();
-myHeaders.append(&#39;Content-Type&#39;, &#39;image/jpeg&#39;);
-var myInit = &#123; 
-    method: &#39;GET&#39;,
-    headers: myHeaders,
-    mode: &#39;cors&#39;,
-    cache: &#39;default&#39; &#125;;
-var myRequest = new Request(&#39;flowers.jpg&#39;);
-fetch(myRequest,myInit).then(function(response) &#123;
-...
-&#125;);
-</code></pre>
-<p><em>因为Fetch的缺点，所以本文就简略介绍，有兴趣的小伙伴们可以到MDN上查阅文档</em><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch">https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API/Using_Fetch</a></p>
-<hr>
-<h2 id="XMLHttpRequest使用"><a href="#XMLHttpRequest使用" class="headerlink" title="XMLHttpRequest使用"></a>XMLHttpRequest使用</h2><p>在不影响用户使用，能够刷新网页局部内容，XMLHttpRequest(XHR)对象在AJAX编程中被大量使用</p>
-<ul>
-<li><strong>XMLHttpRequest()构造函数，用来创建XHR实例对象</strong></li>
-<li><strong>属性</strong><ul>
-<li><strong>onreadystatechange</strong>: 当 readyState 属性发生变化时,调用的event handler</li>
-<li><strong>readyState</strong>:请求的状态码</li>
-<li><strong>response</strong>：整个响应实体</li>
-<li><strong>responseText</strong>：对请求的响应</li>
-<li><strong>responseType</strong>：定义响应类型</li>
-<li><strong>responseURL</strong>: 返回经过序列化（serialized）的响应 URL</li>
-<li><strong>responseXML</strong>：该请求的响应</li>
-<li><strong>status</strong>：请求的响应状态 200 400….</li>
-<li><strong>statusText</strong>：服务器返回的响应状态 “200 OK”</li>
-<li><strong>timeout</strong>：数字，表示该请求的最大请求时间（毫秒），若超出该时间，请求会自动终止。</li>
-<li><strong>ontimeout</strong>：当请求超时调用的 event handler</li>
-<li><strong>upload</strong>: 代表上传进度。</li>
-<li><strong>withCredentials</strong>: 一个布尔值，用来指定跨域 Access-Control 请求是否应当带有授权信息，如 cookie 或授权 header 头。</li>
-</ul>
-</li>
-<li><strong>方法</strong><ul>
-<li>**abort()**：如果请求已被发出，则立刻中止请求。</li>
-<li>**getAllResponseHeaders()**：所有用 CRLF 分隔的响应头</li>
-<li>**getResponseHeader()**：指定响应头的字符串</li>
-<li>**open()**：初始化一个请求</li>
-<li>**overrideMimeType()**：覆写由服务器返回的 MIME 类型</li>
-<li>**send()**：发送请求。</li>
-<li>**setRequestHeader()**：设置 HTTP 请求头的值。必须在 open() 之后、send() 之前调用 setRequestHeader() 方法。</li>
-</ul>
-</li>
-<li><strong>事件</strong><ul>
-<li><strong>onabort</strong>:请求被停止时</li>
-<li><strong>onerror</strong>：请求报错时</li>
-<li><strong>onload</strong>：请求完成时</li>
-<li><strong>onloadend</strong>：请求结束时，不论成功或者失败</li>
-<li><strong>onloadstart</strong>：请求接收到响应数据</li>
-<li><strong>onprogress</strong>：当请求接收到更多的数据，周期性的触发(可用来处理上传)</li>
-<li><strong>ontimeout</strong>：请求超时</li>
-</ul>
-</li>
-<li><strong>使用示例</strong> <pre><code>  //创建XMR对象
-  const xhr = new XMLHttpRequest();
-  //配置请求参数
-  xhr.open(&quot;post&quot;,url,false);//false为同步 true为异步
-  //
-  xhr.responseType = &quot;JSON&quot;
-  //设置请求头
-  xhr.setRequestHeader(&#39;Content-Type&#39;,&#39;application/x-www-form-urlencoded&#39;);
-  //如果我们提交的是表单数据 formdata
-  let fd = new FormData();
-  fd.append(&#39;name&#39;,&#39;1111&#39;);
-  // 回调事件
-  xhr.onload = function () &#123;
-      console.log(xhr.response)
-      console.log(xhr.responseText)
-      console.log(xhr.responseType)
-      console.log(xhr.responseURL)
-      console.log(xhr.status)
-      console.log(xhr.statusText)
-      console.log(xhr.response)
-  &#125;
-  //发送请求
-  xhr.send(fd);
-  xhr.onloadstart = function()&#123;
-      console.log(&#39;服务端开始下载了&#39;)
-  &#125;
-  // 上传文件
-  xhr.upload.onloadstart = function()&#123;
-      console.log(&#39;开始上传了&#39;)
-  &#125;
-  xhr.upload.onprogress = function(e)&#123;
-      console.log(&#39;间隔触发 100ms左右触发一次&#39;)
-      console.log(e.loaded)
-      console.log(e.total)
-  &#125;
-  xhr.upload.onload = function()&#123;
-      console.log(&#39;上传完成&#39;)
-  &#125;
-</code></pre>
-</li>
-</ul>
-<hr>
-<p><strong>参考资料</strong><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API">https://developer.mozilla.org/zh-CN/docs/Web/API/Fetch_API</a><br><a target="_blank" rel="noopener" href="https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest">https://developer.mozilla.org/zh-CN/docs/Web/API/XMLHttpRequest</a></p>
-<hr>
-
-      
-    </div>
-
-    
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2021/11/03/%E6%9C%AC%E6%9C%BAlocalhost%E6%98%A0%E5%B0%84dns%E8%A7%A3%E6%9E%90/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.jpeg">
-      <meta itemprop="name" content="z见见">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="前端个人录">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/11/03/%E6%9C%AC%E6%9C%BAlocalhost%E6%98%A0%E5%B0%84dns%E8%A7%A3%E6%9E%90/" class="post-title-link" itemprop="url">本机localhost映射dns解析</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2021-11-03 08:42:03" itemprop="dateCreated datePublished" datetime="2021-11-03T08:42:03+08:00">2021-11-03</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2021-11-12 08:51:14" itemprop="dateModified" datetime="2021-11-12T08:51:14+08:00">2021-11-12</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E5%B8%B8%E7%94%A8/" itemprop="url" rel="index"><span itemprop="name">常用</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="本机localhost映射dns解析"><a href="#本机localhost映射dns解析" class="headerlink" title="本机localhost映射dns解析"></a>本机localhost映射dns解析</h2><h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><pre><code>C:\Windows\System32\drivers\etc目录下找到hosts文件 ， 进入修改
-</code></pre>
-<ol>
-<li>最后一行添加127.0.0.1 空格 写自己的域名映射  </li>
-<li>增加后进入cmd命令行窗口输入ipconfig /flushdns刷新dns解析  </li>
-<li>此后就可以通过自己写的域名访问自己本机上的域名了</li>
-</ol>
-<p>如下：<br>    <img src="/images/localhost.png" /></p>
-<p>之后你的访问路径就可以是：<br>    <a target="_blank" rel="noopener" href="http://mytest.com:8080/">http://mytest.com:8080</a> 相当于 localhost:8080</p>
-
-      
-    </div>
-
-    
-    
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -1360,6 +655,7 @@ fetch(myRequest,myInit).then(function(response) &#123;
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%A6%82%E5%BF%B5"><span class="nav-number">1.</span> <span class="nav-text">概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTML%E7%AB%A0%E8%8A%82"><span class="nav-number">1.1.</span> <span class="nav-text">HTML章节</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
